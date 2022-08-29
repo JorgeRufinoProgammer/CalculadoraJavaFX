@@ -19,7 +19,7 @@ public class Utils {
 			ultimaLetra = String.valueOf(str.trim().charAt(str.length() - 1));
 		}
 		
-		return ultimaLetra.matches("[^\\d]+");
+		return ultimaLetra.matches("[^\\d)(]+");
 	}
 	//Se o ultimo character for um sinal de operação, alterar ele para um novo sinal de operaçao, ou somente adciona um 
 	public static void changeOperation (TextField txt, String newOperation) {

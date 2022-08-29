@@ -11,7 +11,7 @@ public class Calculator {
 			
 			Stack<Double> operands = new Stack<>(); 		// Operand stack
 			Stack<Character> operations = new Stack<>(); 	// Operator stack
-
+			
 			String[] tokens = expression.split("(?<=[-+*/()^])|(?=[-+*/()^])");
 			
 			for (int i = 0; i < tokens.length; i++) {			

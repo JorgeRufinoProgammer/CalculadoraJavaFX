@@ -65,7 +65,7 @@ public class MainController implements Initializable{
 	
 	public void onBtn0Result() {
 		String strField = txtResult.getText();
-		Calculator obj = new Calculator();
+		Calculator obj = new Calculator();		
 		txtResult.setText(""+obj.evaluate(strField));
 		Utils.gainFocus(txtResult);		
 	}

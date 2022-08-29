@@ -90,6 +90,8 @@ public class Calculator {
 			return b - a;
 		case '*':
 			return a * b;
+		case '^':
+			return Math.pow(a, b);
 		case '/':
 			if (a == 0) {
 				System.out.println("Cant divide by zero");
@@ -97,6 +99,7 @@ public class Calculator {
 			}
 			return b / a;
 		}
+		
 		return 0;
 	}
 

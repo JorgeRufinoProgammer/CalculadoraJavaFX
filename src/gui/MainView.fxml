@@ -57,5 +57,7 @@
       <Button fx:id="btnExpon" layoutX="150.0" layoutY="100.0" mnemonicParsing="false" onAction="#onBtnExpon" prefHeight="40.0" prefWidth="44.0" text="^ " />
       <Button fx:id="btnDeleteAll" layoutX="20.0" layoutY="100.0" mnemonicParsing="false" onAction="#onBtnDeleteAll" prefHeight="40.0" prefWidth="44.0" text="C" underline="true" />
       <Button fx:id="btnDelete" layoutX="84.0" layoutY="100.0" mnemonicParsing="false" onAction="#onBtnDelete" prefHeight="40.0" prefWidth="44.0" text="&lt;-" />
+      <Label layoutX="20.0" layoutY="445.0" text="Obs: Utilize ponto em vez de vírgula." />
+      <Label layoutX="48.0" layoutY="462.0" text="Tecla Enter chama &quot;resultado&quot;." />
    </children>
 </AnchorPane>

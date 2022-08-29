@@ -61,11 +61,43 @@ public class Constraints {
 		 || newValue.contains("-*") || newValue.contains("*/") || newValue.contains("/*") || newValue.contains(".+")
 		 || newValue.contains("+.") || newValue.contains(".-") || newValue.contains("-.") || newValue.contains(".*")
 		 || newValue.contains("*.") || newValue.contains("./") || newValue.contains("/.") || newValue.contains("/-")
-		 || newValue.contains("-/")) {
+		 || newValue.contains("-/") || newValue.contains("()") || newValue.contains(")("))  {
 			
 			result = true;
 		}		
 		
 		return result;
+	}
+	
+	public static boolean validateExpression(String str) {				
+		int contador = 0;
+		//Verifica se termina com um operador
+		if (Utils.lastCharactereIsOperation(str)) {		
+			return false;
+		}
+		
+		for (int i = 0; i < str.length(); i++) {
+			char c = str.charAt(i);
+			
+			if(c == '(') {
+				contador++;
+			}
+			if(c == ')') {
+				contador--;
+				if(isOperator(str.charAt(i-1))) {
+					return false;
+				}
+			}
+		}
+		
+		if (contador == 0 ) {
+			return true;
+		}
+		
+		return false;
+	}
+	
+	public static boolean isOperator(char c) {
+		return (c == '+' || c == '-' || c == '/' || c == '*' || c == '^');
 	}
 }

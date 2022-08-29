@@ -66,8 +66,16 @@ public class MainController implements Initializable{
 	public void onBtn0Result() {
 		String strField = txtResult.getText();
 		Calculator obj = new Calculator();		
-		txtResult.setText(""+obj.evaluate(strField));
-		Utils.gainFocus(txtResult);		
+		if (Constraints.validateExpression(strField)) {			
+			txtResult.setStyle("-fx-text-fill: black; -fx-font-size: 12px;");
+			txtResult.setText(""+obj.evaluate(strField));			
+			Utils.gainFocus(txtResult);			
+		}
+		else {			
+			txtResult.setStyle("-fx-text-fill: red; -fx-font-size: 12px;");
+			txtResult.setText(strField);
+			Utils.gainFocus(txtResult);			
+		}
 	}
 	
 	public void onBtnSum() {

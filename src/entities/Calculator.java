@@ -35,6 +35,16 @@ public class Calculator {
 	
 				// current character is operator
 				else if (isOperator(token.charAt(0))) {
+					//Verifica se o número é negativo
+					if (!operations.isEmpty()) {
+						if (operations.peek() == '-') {
+							double x = -1.0;
+							double negative =  x * operands.pop();
+							operands.push(negative);
+							operations.pop();
+						}
+					}
+					
 					while (!operations.isEmpty() && precedence(token.charAt(0)) <= precedence(operations.peek())) {
 						double output = performOperation(operands, operations);
 						operands.push(output); // push result back to stack

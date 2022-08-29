@@ -48,9 +48,9 @@ public class Constraints {
 		boolean result = false;
 
 		//Evita que comece digitando as operaçoes
-		if ((newValue.equals("+") && oldValue.equals("")) || (newValue.equals("-") && oldValue.equals(""))
-		||  (newValue.equals("*") && oldValue.equals("")) || (newValue.equals("/") && oldValue.equals(""))
-		||  (newValue.equals(".") && oldValue.equals(""))) {
+		if ((newValue.equals("+") && oldValue.equals("")) || (newValue.equals("/") && oldValue.equals(""))
+		||  (newValue.equals("*") && oldValue.equals("")) || (newValue.equals(".") && oldValue.equals(""))) 
+		 {
 			
 			result = true;
 		}
